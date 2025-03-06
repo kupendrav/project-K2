@@ -10,4 +10,6 @@
 cmd npx nodemon
 2. connect the backend to mongodb 
 cmd npx nodemon
-3. 
+3. create folders[controllers,models,db,routes,services]
+4. install package
+cmd npm i express-validator

@@ -7,4 +7,13 @@ export const createUser = async (
     if (!email || !password) {
         throw new Error('All fields are required');
     }
+
+    const hashedPassword = await userModel.hashPassword(password);
+
+    const user = await userModel.create({
+        email,
+        password: hashedPassword,
+    });
+
+    return user;
 }
